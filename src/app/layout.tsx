@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={inter.className} lang="pt">
-      <body className="grid-cols-app grid min-h-screen text-zinc-700 antialiased selection:bg-white">
+      <body className="grid min-h-screen grid-cols-app text-zinc-700 antialiased selection:bg-white">
         <Aside />
 
         <main className="px-4 pb-12 pt-8">{children}</main>

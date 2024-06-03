@@ -1,9 +1,12 @@
 import { LifeBuoy, Search, Settings } from 'lucide-react'
-import { LogoSVG } from './logo'
-import { MainNavigation } from './main-navigation'
-import { NavItem } from './nav-item'
-import { UsedSpaceWidget } from './used-space-widget'
-import { Profile } from './profile'
+
+import { InputControl, InputPrefix, InputRoot } from '../input'
+
+import { LogoSVG } from './components/logo'
+import { MainNavigation } from './components/main-navigation'
+import { NavItem } from './components/nav-item'
+import { UsedSpaceWidget } from './components/used-space-widget'
+import { Profile } from './components/profile'
 
 export default function Aside() {
   return (
@@ -13,14 +16,13 @@ export default function Aside() {
         <span className="text-xl font-semibold text-zinc-900">Untitled UI</span>
       </div>
 
-      <div className="flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2">
-        <Search className="h-5 w-5 text-zinc-500" />
-        <input
-          className="flex-1 border-0 bg-transparent p-0 text-zinc-900 outline-none placeholder:text-zinc-600"
-          type="text"
-          placeholder="Search"
-        />
-      </div>
+      <InputRoot>
+        <InputPrefix>
+          <Search className="h-5 w-5 text-zinc-500" />
+        </InputPrefix>
+
+        <InputControl type="text" placeholder="Search" />
+      </InputRoot>
 
       <MainNavigation />
       <div className="mt-auto flex flex-col gap-6">
