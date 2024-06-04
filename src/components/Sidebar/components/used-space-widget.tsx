@@ -17,7 +17,7 @@ export function UsedSpaceWidget() {
       <div className="space-x-3">
         <button
           type="button"
-          className="text-sm font-semibold text-violet-700 hover:text-violet-700"
+          className="transform text-sm font-semibold text-violet-700 hover:text-violet-700"
         >
           Dismiss
         </button>
