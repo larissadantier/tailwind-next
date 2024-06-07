@@ -1,6 +1,8 @@
-import { Mail, UploadCloud, User } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { SettingsTabs } from '@/components/SettingsTabs'
-import { InputRoot, InputPrefix, InputControl } from '@/components/input'
+import { InputRoot, InputPrefix, InputControl } from '@/components/Form/input'
+
+import * as FileInput from '@/components/Form/FileInput'
 
 export default function Home() {
   return (
@@ -38,7 +40,7 @@ export default function Home() {
           id="settings"
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid-cols-form grid gap-3">
+          <div className="grid grid-cols-form gap-3">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
@@ -56,7 +58,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="email"
               className="text-sm font-medium text-zinc-700"
@@ -76,7 +78,7 @@ export default function Home() {
             </InputRoot>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="your-photo"
               className="text-sm font-medium text-zinc-700"
@@ -87,35 +89,15 @@ export default function Home() {
               </span>
             </label>
 
-            <div className="flex items-start gap-5">
-              <div className="flex size-14 items-center justify-center rounded-full bg-violet-50">
-                <User className="size-8 text-violet-600" />
-              </div>
+            <FileInput.Root className="flex items-start gap-5">
+              <FileInput.ImagePreview />
 
-              <label
-                className="hover:bg-violet-25 group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-dashed border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-violet-200 hover:text-violet-500"
-                htmlFor="photo"
-              >
-                <div className="border-6 rounded-full border-zinc-50 bg-zinc-100 p-2 group-hover:border-violet-50 group-hover:bg-violet-100">
-                  <UploadCloud className="size-5 group-hover:text-violet-600" />
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-sm">
-                    <strong className="text-violet-700">Click to upload</strong>{' '}
-                    or drag and drop
-                  </span>
-
-                  <span className="text-xs text-zinc-500 group-hover:text-violet-600">
-                    SVG, PNG, JPG or GIF (max. 800x400px)
-                  </span>
-                </div>
-              </label>
-
-              <input type="file" name="" id="photo" className="sr-only" />
-            </div>
+              <FileInput.Trigger />
+              <FileInput.Control />
+            </FileInput.Root>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
@@ -125,7 +107,7 @@ export default function Home() {
             </InputRoot>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="country"
               className="text-sm font-medium text-zinc-700"
@@ -136,7 +118,7 @@ export default function Home() {
             <div />
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="timezone"
               className="text-sm font-medium text-zinc-700"
@@ -147,7 +129,7 @@ export default function Home() {
             <div />
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
               Bio
               <span className="mt-0.5 block text-sm text-zinc-500">
@@ -158,7 +140,7 @@ export default function Home() {
             <div />
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="portfolio-projects"
               className="text-sm font-medium text-zinc-700"
@@ -169,7 +151,10 @@ export default function Home() {
               </span>
             </label>
 
-            <div />
+            <FileInput.Root>
+              <FileInput.Trigger />
+              <FileInput.Control multiple />
+            </FileInput.Root>
           </div>
 
           <div className="flex items-center justify-end gap-3 pt-5">
