@@ -6,6 +6,7 @@ import * as FileInput from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
 import { TextArea } from '@/components/Form/TextArea'
+import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
@@ -23,19 +24,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              className="flex items-center rounded-lg border border-zinc-300 bg-transparent px-4 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              type="submit"
-              form="settings"
-              className="flex items-center rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
+            </Button>
+            <Button type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -161,43 +155,40 @@ export default function Home() {
                 </Select>
 
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
-                    <Bold className="size-4 text-zinc-400" strokeWidth={3} />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
-                    <Italic className="size-4 text-zinc-400" strokeWidth={3} />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
-                    <Link className="size-4 text-zinc-400" strokeWidth={3} />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
-                    <List className="size-4 text-zinc-400" strokeWidth={3} />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
-                    <ListOrdered
-                      className="size-4 text-zinc-400"
+                  <Button variant="ghost" type="button">
+                    <Bold
+                      className="size-4 text-zinc-400 group-hover:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
+                  </Button>
+
+                  <Button variant="ghost" type="button">
+                    <Italic
+                      className="size-4 text-zinc-400 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </Button>
+
+                  <Button variant="ghost" type="button">
+                    <Link
+                      className="size-4 text-zinc-400 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </Button>
+
+                  <Button variant="ghost" type="button">
+                    <List
+                      className="size-4 text-zinc-400 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </Button>
+
+                  <Button variant="ghost" type="button">
+                    <ListOrdered
+                      className="size-4 text-zinc-400 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </Button>
                 </div>
               </div>
 
@@ -227,19 +218,12 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-3 pt-5">
-            <button
-              type="button"
-              className="flex items-center rounded-lg border border-zinc-300 bg-transparent px-4 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              type="submit"
-              form="settings"
-              className="flex items-center rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
+            </Button>
+            <Button type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </div>

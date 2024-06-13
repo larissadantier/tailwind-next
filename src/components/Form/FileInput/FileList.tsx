@@ -3,6 +3,7 @@ import { Trash2, UploadCloud } from 'lucide-react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { useFileInput } from './Root'
 import { formatBytes } from '@/utils/format-bytes'
+import { Button } from '@/components/Button'
 
 export function FileList() {
   const { files } = useFileInput()
@@ -38,12 +39,9 @@ export function FileList() {
               </div>
             </div>
 
-            <button
-              type="button"
-              className="group ml-auto rounded-lg p-2 hover:bg-violet-50"
-            >
+            <Button type="button" variant="ghost">
               <Trash2 className="h-5 w-5 text-zinc-500 group-hover:text-violet-500" />
-            </button>
+            </Button>
           </div>
         )
       })}
