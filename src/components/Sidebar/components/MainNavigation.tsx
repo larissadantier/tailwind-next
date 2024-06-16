@@ -6,7 +6,7 @@ import {
   Layers3,
   Users,
 } from 'lucide-react'
-import { NavItem } from './nav-item'
+import { NavItem } from './NavItem'
 
 export function MainNavigation() {
   return (

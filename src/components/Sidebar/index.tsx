@@ -4,13 +4,14 @@ import { LifeBuoy, Menu, Search, Settings } from 'lucide-react'
 
 import { InputControl, InputPrefix, InputRoot } from '../Form/input'
 
+import { MainNavigation } from './components/MainNavigation'
+import { NavItem } from './components/NavItem'
+import { UsedSpaceWidget } from './components/UsedSpaceWidget'
 import { LogoSVG } from './components/logo'
-import { MainNavigation } from './components/main-navigation'
-import { NavItem } from './components/nav-item'
-import { UsedSpaceWidget } from './components/used-space-widget'
 import { Profile } from './components/profile'
-import * as Collpasible from '@radix-ui/react-collapsible'
 import { Button } from '../Button'
+
+import * as Collpasible from '@radix-ui/react-collapsible'
 
 export default function Aside() {
   return (
