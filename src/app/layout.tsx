@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className="grid min-h-screen grid-cols-app text-zinc-700 antialiased selection:bg-white">
         <Aside />
 
-        <main className="px-8 pb-12 pt-8">{children}</main>
+        <main className="px-4 pb-12 pt-24 lg:col-start-2 lg:px-8 lg:pb-12 lg:pt-8">
+          {children}
+        </main>
       </body>
     </html>
   )
