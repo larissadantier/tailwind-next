@@ -21,7 +21,7 @@ const fileItem = tv({
         container: 'border-violet-500',
       },
       error: {
-        container: 'bg-error-25 border-error-300',
+        container: 'border-error-300 bg-error-25',
         icon: 'border-error-50 bg-error-100 text-error-600',
         deleteButton: 'text-error-700 hover:text-error-900',
       },
@@ -59,7 +59,7 @@ export function FileItem({ name, size, state }: FileItemProps) {
 
           <button
             type="button"
-            className="text-error-700 hover:text-error-900 text-sm font-semibold"
+            className="text-sm font-semibold text-error-700 hover:text-error-900"
           >
             Try Again
           </button>

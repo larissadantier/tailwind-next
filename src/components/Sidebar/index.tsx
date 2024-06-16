@@ -7,15 +7,16 @@ import { InputControl, InputPrefix, InputRoot } from '../Form/input'
 import { MainNavigation } from './components/MainNavigation'
 import { NavItem } from './components/NavItem'
 import { UsedSpaceWidget } from './components/UsedSpaceWidget'
-import { LogoSVG } from './components/logo'
-import { Profile } from './components/profile'
+import { LogoSVG } from './components/Logo'
+import { Profile } from './components/Profile'
+
 import { Button } from '../Button'
 
 import * as Collpasible from '@radix-ui/react-collapsible'
 
 export default function Aside() {
   return (
-    <Collpasible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 border-b border-r border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:data-[state=closed]:bottom-0">
+    <Collpasible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 overflow-auto border-b border-r border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:data-[state=closed]:bottom-0">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2.5 lg:py-8">
           <LogoSVG />
