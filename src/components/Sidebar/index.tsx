@@ -14,13 +14,13 @@ import { Button } from '../Button'
 
 import * as Collpasible from '@radix-ui/react-collapsible'
 
-export default function Aside() {
+export default function Sidebar() {
   return (
-    <Collpasible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 overflow-auto border-b border-r border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:data-[state=closed]:bottom-0">
+    <Collpasible.Root className="dark: fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 overflow-auto border-b border-r border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:data-[state=closed]:bottom-0 dark:border-zinc-800 dark:bg-zinc-900">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2.5 lg:py-8">
           <LogoSVG />
-          <span className="text-xl font-semibold text-zinc-900">
+          <span className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
             Untitled UI
           </span>
         </div>
@@ -38,7 +38,7 @@ export default function Aside() {
       >
         <InputRoot>
           <InputPrefix>
-            <Search className="h-5 w-5 text-zinc-500" />
+            <Search className="h-5 w-5 text-zinc-500 dark:text-zinc-100" />
           </InputPrefix>
 
           <InputControl type="text" placeholder="Search" />
@@ -52,6 +52,8 @@ export default function Aside() {
           </nav>
 
           <UsedSpaceWidget />
+
+          <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
 
           <Profile />
         </div>
